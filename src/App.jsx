@@ -15,18 +15,18 @@ function App() {
       <Navbar />
       <Social />
 
-      {/* Hero Section: Adjusted height for mobile to 80vh, scaling up on larger screens */}
-      <div className='mx-auto mt-2 border-4 border-white rounded-3xl w-[95%] max-w-[1520px] h-[90vh] /* <- updated: mobile height */ sm:h-[85vh] /* <- updated: small breakpoint */ md:h-[90vh] /* <- updated: medium breakpoint */ lg:h-[95vh] /* <- updated: large breakpoint */'>
-        <img src={Footballl} alt="Football" className='w-full h-full object-cover rounded-3xl' />
+      
+      <div className='mx-auto  w-full max-w-full h-[99.9vh] border-2 border-white'>
+        <img src={Footballl} alt="Football" className='w-full h-full object-cover' />
       </div>
 
-      {/* Show Foottext only on medium and up */}
-      <div className='hidden md:block absolute top-10 left-4 w-[60%] max-w-[450px] h-auto text-white'>
-        <img src={Foottext} alt="Football" className='w-full h-full opacity-80' />
+     
+      <div className='hidden md:block absolute top-38.5 -left-36 w-[60%] max-w-[450px] h-auto text-white'>
+        <img src={Foottext} alt="Football" className='w-full h-full opacity-85' />
       </div>
 
-      {/* Next Game Box - hidden on small screens */}
-      <div className='hidden md:block absolute right-4 top-[60%] w-[250px] bg-neutral-600/20 text-white opacity-90 border border-white p-4 rounded-lg'>
+      
+      <div className='hidden md:block absolute -right-2 top-[60%] w-[250px] bg-neutral-600/20 text-white opacity-90 border-3 border-white p-4 rounded-lg'>
         <div className='flex items-center justify-center space-x-4'>
           <GiTrophyCup className='text-xl' />
           <p className='bebas-neue-regular text-xl'>NEXT GAME</p>
@@ -38,22 +38,26 @@ function App() {
         </div>
       </div>
 
-      {/* Arrow Icon - hidden on small screens */}
+     
       <MdOutlineDoubleArrow className='hidden md:block text-white absolute bottom-24 right-8 text-3xl' />
 
-      {/* Buttons visible always, positioned lower on mobile */}
-      <div className='absolute flex flex-wrap justify-center items-center gap-4 bottom-20 left-1/2 transform -translate-x-1/2'>
-        <button className='w-[140px] h-12 bebas-neue-regular text-gray-200 text-lg tracking-wider rounded-md border border-gray-300 bg-transparent'>Register NOW</button>
-        <button className='w-[140px] h-12 bebas-neue-regular text-gray-200 text-lg tracking-wider rounded-md border border-gray-300 bg-transparent'>Book Ticket</button>
-        
-      {/* Mobile Footer with Social Links */}
-      <footer className='md:hidden absolute bottom-0 w-full py-4 bg-black/40 flex justify-center space-x-8 text-white'>
-        <a href="#" className="text-xl"><FaFacebook /></a>
-        <a href="#" className="text-xl"><FaTwitterSquare /></a>
-        <a href="#" className="text-xl"><CgMail /></a>
-      </footer>
-      </div>
+     
+      <div className='absolute flex flex-col items-center gap-4 bottom-10 left-1/2 transform -translate-x-1/2 '>
+      <div className="flex flex-row gap-2 sm:gap-4 lg:gap-8">
+  <button className="w-[120px] sm:w-[150px] lg:w-[190px] h-10 sm:h-11 lg:h-12 bebas-neue-regular text-gray-200 text-base sm:text-xl lg:text-2xl tracking-wider rounded-md border-3 border-gray-300 bg-transparent">
+    Register NOW
+  </button>
+  <button className="w-[120px] sm:w-[150px] lg:w-[190px] h-10 sm:h-11 lg:h-12 bebas-neue-regular text-gray-200 text-base sm:text-xl lg:text-2xl tracking-wider rounded-md border-3 border-gray-300 bg-transparent">
+    Book Ticket
+  </button>
+</div>
 
+        <div className='md:hidden flex justify-center space-x-6 mt-4 text-white'>
+          <a href="#" className="text-2xl"><FaFacebook /></a>
+          <a href="#" className="text-2xl"><FaTwitterSquare /></a>
+          <a href="#" className="text-2xl"><CgMail /></a>
+        </div>
+      </div>
     </div>
   );
 }
